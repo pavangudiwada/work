@@ -1,0 +1,40 @@
+#wrapper{
+	border: 5px dashed #555555;
+		
+}
+
+#wrapper h1{
+	
+	font-family: sans-serif;
+	background-color: #23ff55;
+	text-align: center;
+	border: 5px dotted blue;
+	color: white;
+}
+
+.data{
+	color:white;
+}
+
+body, html {
+    height: 100%;
+}
+
+#image{
+	background-image: url("coderlife.jpg");
+	background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto; 
+    width: 100%;
+}
+
+.inimage{
+	opacity: 0.9;
+	width: 500px;
+	height:auto;
+}
+
+.inimage:hover{
+	opacity: 1;
+}
