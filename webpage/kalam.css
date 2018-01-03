@@ -1,0 +1,72 @@
+img{
+	position: absolute;
+	top: 5px;
+	left: 40px;
+	width: 260px;
+	
+}
+#body{
+	/*background-color: #FF444F ;*/
+	background-color: #4A96AD;
+	border-color: #7C0F40;
+	border-style: dotted;
+	border-bottom: none;
+	border-left: none;
+
+}
+h1{
+	color: #FAEFDB;
+	font-family: sans-serif;
+	font-size: 100px;
+	text-align: center;
+	text-shadow: 6px 4px black;
+
+}
+
+
+h4{
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 40px;
+}
+
+p{
+	color: #4F0A0B;
+
+}
+
+.forminp{
+	color: blue;
+	border-color: black;
+	outline: none;
+	background-color: transparent;
+	color: #fff;
+	font-size: 28px;
+	width: 200px;
+	height:30px;
+
+}
+
+.forminp{
+	background-color: #FF444F;
+	cursor: pointer;
+	border-radius: 20px;
+	width: 300px;
+}
+
+#submit{
+
+	border-color: black;
+	height: 30px;
+	width: 100px;
+	border-radius: 20px;
+	background-color: #1CC8CC;
+	text-decoration: blink;
+
+}
+
+#submit:hover{
+	background-color: #FF444F;
+}
+
+
