@@ -1,0 +1,273 @@
+This is my index page
+<html>
+<head>
+<title>Login - FLATY Admin</title>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/flaty.css">
+<link rel="stylesheet" href="css/flaty-responsive.css">
+<link rel="shortcut icon" href="images/login.png">
+<script type="text/javascript">
+function loginFunction()
+{//alert('kjo8iyh78i');
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+if(username == "")
+{
+alert('Enetr User Name');
+}
+else
+if(password == "")
+{
+alert('Enter Password');
+}
+//else
+//if(remember == "")
+//{
+//alert('Click the CheckBox');
+//}
+//if (username.innerHTML == 'Must be 3+ letters' || password.innerHTML == 'Password too short')
+// {
+//alert("Fill Valid Information");
+//} 
+//else {
+////Submit Form When All values are valid.
+//document.getElementById("login").submit();
+//}
+}
+</script>
+</head>
+<body class="login-page">
+<div class="login-wrapper">
+<form id="form-login" action="dashboard.php" method="post">
+<h3>Login to your account</h3>
+<hr/>
+<div class="form-group">
+<div class="controls">
+<input type="text" id="username" name="username" placeholder="username"class="form-control" />
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<input type="password" id="password" name="password" placeholder="password"class="form-control" /> 
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<label class="checkbox">
+<input type="checkbox"  name="remember" value="remember" required/> Remember me
+</label>
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<input type="submit" name="submit" value="Sign In"  class="btn btn-primary form-control" onFocus="loginFunction()">
+</div>
+</div>
+<hr/>
+<p>
+<a href="recover.php">Forgot Password</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="signup.php">Sign Up</a></p>
+</form>
+</div>
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.0.3.min.js"><\/script>')</script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+Dashboard.php:::
+<?php
+include('connect.php');
+$username=$_POST['username'];
+if($_SESSION['username']) {
+?>
+Welcome <?php echo $_SESSION['username']; ?>
+<?php
+}
+?>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Dashboard</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+<!--base css styles-->
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+<!--page specific css styles-->
+<!--flaty css styles-->
+<link rel="stylesheet" href="css/flaty.css">
+<link rel="stylesheet" href="css/flaty-responsive.css">
+<link rel="shortcut icon" href="images/userdashboard.jpg">
+</head>
+<body>
+<!-- BEGIN Navbar -->
+<div id="navbar" class="navbar">
+<button type="button" class="navbar-toggle navbar-btn collapsed" data-toggle="collapse" data-target="#sidebar">
+<span class="fa fa-bars"></span>
+</button>
+<a class="navbar-brand" href="#">
+<small>
+<i class="fa fa-desktop"></i>
+FLATY Admin
+</small>
+</a>
+<!-- BEGIN Navbar Buttons -->
+<ul class="nav flaty-nav pull-right">
+</ul>
+<!-- END Tasks Dropdown -->
+</li>
+<!-- END Button Tasks -->
+<!-- BEGIN Button Notifications -->
+<li class="hidden-xs">
+</li>
+<!-- END Button Notifications -->
+<!-- BEGIN Button Messages -->
+<li class="hidden-xs">
+</li>
+<!-- BEGIN Messages Dropdown -->
+<ul class="dropdown-navbar dropdown-menu">
+<li class="nav-header">
+</li>
+</ul>
+<!-- END Notifications Dropdown -->
+</li>
+<!-- END Button Messages -->
+</div>
+</div>
+<!-- END Content -->
+</div>
+<!-- END Container -->
+<!--basic scripts-->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>')</script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="assets/jquery-cookie/jquery.cookie.js"></script>
+<!--page specific plugin scripts-->
+<script src="assets/flot/jquery.flot.js"></script>
+<script src="assets/flot/jquery.flot.resize.js"></script>
+<script src="assets/flot/jquery.flot.pie.js"></script>
+<script src="assets/flot/jquery.flot.stack.js"></script>
+<script src="assets/flot/jquery.flot.crosshair.js"></script>
+<script src="assets/flot/jquery.flot.tooltip.min.js"></script>
+<script src="assets/sparkline/jquery.sparkline.min.js"></script>
+<!--flaty scripts-->
+<script src="js/flaty.js"></script>
+<script src="js/flaty-demo-codes.js"></script>
+</body>
+</html>
+Signup.php::::
+<html>
+<!-- Mirrored from themes.shamsoft.net/flaty/extra_login.html by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 27 Dec 2013 07:54:25 GMT -->
+<!--check this::http://www.formget.com/form-validation-using-ajax/ http://www.webstandards.org/learn/reference/charts/entities/symbol_entities/ http://xahlee.info/comp/unicode_arrows.html-->
+<head>
+<title>SignUp - FLATY Admin</title>
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/flaty.css">
+<link rel="stylesheet" href="css/flaty-responsive.css">
+<link rel="shortcut icon" href="images/signup.jpg">
+<script>
+function signupFunction()
+{
+//alert('kjo8iyh78i');
+var email           =  document.getElementById("email").value;
+var username        =  document.getElementById("username").value;
+var password        =  document.getElementById("password").value;
+var repeatpassword  =  document.getElementById("repeatpassword").value;
+if(email == "")
+{
+alert('Please enter Email');
+}
+else
+if(username == "")
+{
+alert('Please enter username');
+}
+else
+if(password == "")
+{
+alert('Please enter password');
+}
+else
+if(repeatpassword == "")
+{
+alert('Please enter same password');
+}
+}
+</script>
+</head>
+<body class="login-page">
+<div class="login-wrapper">
+<form id="form-register" action="welcome.php" method="post"><!--style="display:none"-->
+<h3>Sign up</h3>
+<hr/>
+<!--<p>&nbsp;All fields are mandatory.</p>-->
+<div class="form-group">
+<div class="controls">
+<input type="email" name="email" id="email"placeholder="Email" class="form-control"/>
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<input type="text"   name="username" id="username" placeholder="Username" class="form-control"/>
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<input type="password" name="password" id="password" placeholder="Password" class="form-control" /> 
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<input type="password" name="repeatpassword" id="repeatpassword" placeholder="Repeat Password"  class="form-control"/>
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<label class="checkbox">
+<input type="checkbox" value="remember" required/> I accept the <a href="#">user aggrement</a>
+</label>
+</div>
+</div>
+<div class="form-group">
+<div class="controls">
+<input type="submit" value="Sign Up" class="btn btn-primary form-control" onClick="signupFunction()"/>
+</div>
+</div>
+<hr/>
+<p class="clearfix">
+<a href="index.php" class="goto-login pull-left">&larr;Back to login form</a>
+</p>
+</form>
+</div>
+<script src="../../ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.0.3.min.js"><\/script>')</script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
+welcome.php :::
+<?
+include('connect.php');
+$username=$_POST['username'];
+$password=$_POST['password'];
+$repeatpassword=$_POST['repeatpassword'];
+$email=$_POST['email'];
+mysql_query("insert into ajaxlogin(username,password,repeatpassword,email)values('$username','$password','$repeatpassword','$email')")or die(mysql_error());
+echo "<script type='text/javascript'>alert('Signed Up Successfully. Please Login');window.location.href='index.php' </script>";
+?>
+<?php
+include('lock.php');
+?>
+<body>
+<h1>Welcome <?php echo $login_session; ?></h1>
+</body>
+Connect.php:::
+<?php
+session_start();
+$con=mysql_connect("localhost","root","") or die (mysql_error());
+mysql_select_db("test",$con)or die ("Oops! DB not connected".mysql_error());
+?>
